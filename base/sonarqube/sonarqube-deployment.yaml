@@ -26,12 +26,12 @@ spec:
         ports:
         - containerPort: 9000
         resources:
-          requests:
-            memory: "2048Mi"
-            cpu: "500m"
-          limits:
-            memory: "3Gi"
-            cpu: "5"
+           requests:
+              memory: "2Gi"
+              cpu: "1"
+            limits:
+              memory: "4Gi"
+              cpu: "2"
         volumeMounts:
         - mountPath: /opt/sonarqube/data
           name: sonarqube-storage
