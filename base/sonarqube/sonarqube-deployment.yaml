@@ -26,12 +26,12 @@ spec:
         ports:
         - containerPort: 9000
         resources:
-           requests:
-              memory: "2Gi"
-              cpu: "1"
-            limits:
-              memory: "4Gi"
-              cpu: "2"
+          requests:
+            memory: "512Mi"
+            cpu: "500m"
+          limits:
+            memory: "2Gi"
+            cpu: "1"
         volumeMounts:
         - mountPath: /opt/sonarqube/data
           name: sonarqube-storage
@@ -41,4 +41,3 @@ spec:
           claimName: sonarqube-pvc
       - name: init-scripts
         emptyDir: {}
-
