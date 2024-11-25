@@ -5,8 +5,8 @@ metadata:
   namespace: sonarqube
 spec:
   accessModes:
-    - ReadWriteOnce
+    - ReadWriteMany
   resources:
     requests:
-      storage: 1Gi
-  storageClassName: manual
+      storage: 10Gi
+
