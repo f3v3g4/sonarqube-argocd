@@ -24,6 +24,5 @@ spec:
       volumes:
       - name: sonarqube-storage
         persistentVolumeClaim:
-          claimName: sonarqube-pvc
-      - name: init-scripts
+          claimName: sonarqube-pvc      
         emptyDir: {}
