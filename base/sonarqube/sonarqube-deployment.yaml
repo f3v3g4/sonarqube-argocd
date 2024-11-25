@@ -12,14 +12,7 @@ spec:
     metadata:
       labels:
         app: sonarqube
-    spec:
-      initContainers:
-      - name: setup
-        image: busybox
-        command: ["/bin/sh", "-c", "/init-scripts/setup.sh"]
-        volumeMounts:
-        - name: init-scripts
-          mountPath: /init-scripts
+    spec:      
       containers:
       - name: sonarqube
         image: sonarqube:latest
